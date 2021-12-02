@@ -1,1 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SignupActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:textSize="50dp"
+        android:text="Register"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <EditText
+        android:id="@+id/ed_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter UserName"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:text="Enter Password" />
+
+    <EditText
+        android:id="@+id/ed_confirm_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:text="ConfirmPassword" />
+
+    <Button
+        android:id="@+id/btn_create_user"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="20dp"
+        android:text="CreateUser"
+        android:textSize="24dp"/>
+</LinearLayout>
