@@ -2,45 +2,44 @@ package com.example.healthtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity2 extends AppCompatActivity {
-    TextView tvresult;
-    EditText etweight,etheight;
+public class MainActivity4 extends AppCompatActivity {
+    EditText weight,height,age;
+    RadioGroup radioGroup;
+    Button button;
+    TextView result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        etweight= findViewById(R.id.etweight);
-        etheight= findViewById(R.id.etheight);
-        tvresult= findViewById(R.id.textView5);
-    }
+        setContentView(R.layout.activity_main6);
+        weight=findViewById(R.id.we);
+        height=findViewById(R.id.he);
+        age=findViewById(R.id.ag);
+        radioGroup= findViewById(R.id.radioGroup2);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                double Weight,Age,Height,Result;
+                Weight=Double.parseDouble(weight.getText().toString());
+                Age=Double.parseDouble(age.getText().toString());
+                Height=Double.parseDouble(age.getText().toString());
+                switch (checkedId){
+                    case R.id.male:{
+                        Result= (Weight*100)*(Height*6.25)*(Age*5)/5 ;
+                        result.setText(String.valueOf(Result));
+                    }
+                    case R.id.female:{
+                        Result= (Weight*100)/(Height*6.25)/(Age*5)*161 ;
+                        result.setText(String.valueOf(Result));
+                    }
+                }
+            }
+        });
 
-
-    public void calculator(View v){
-        double w,h,result;
-        byte a;
-        w=Double.parseDouble(etweight.getText().toString());
-        h=Double.parseDouble(etheight.getText().toString());
-        result=w*10000/h/h;
-        tvresult.setText(String.valueOf(result));
-        Toast.makeText(this,"BMI",Toast.LENGTH_SHORT).show();
-        if(result<18.5){
-            Toast.makeText(this,"YOU ARE UNDERWEIGHT",Toast.LENGTH_SHORT).show();
-        }
-        else if(result<24.9){
-            Toast.makeText(this,"YOU ARE NORMAL",Toast.LENGTH_SHORT).show();
-        }
-        else if(result<29.9){
-            Toast.makeText(this,"YOU ARE OVERWEIGHT",Toast.LENGTH_SHORT).show();
-        }
-        else{
-            Toast.makeText(this,"YOU ARE OBESE",Toast.LENGTH_SHORT).show();
-        }
     }
 }
