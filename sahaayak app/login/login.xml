@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/white"
+    android:background="@drawable/login1"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".LoginActivity">
@@ -16,23 +16,23 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:textSize="50dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="100dp"/>
 
     <EditText
-        android:id="@+id/ed_username"
+        android:id="@+id/usernameLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:hint="UserName" />
 
     <EditText
-        android:id="@+id/ed_password"
+        android:id="@+id/passwordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:inputType="textPassword"
         android:hint="Password" />
 
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15dp"
         android:layout_marginLeft="170dp" />
 
