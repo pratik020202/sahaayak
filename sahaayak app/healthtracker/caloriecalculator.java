@@ -30,11 +30,11 @@ public class MainActivity4 extends AppCompatActivity {
                 Height=Double.parseDouble(age.getText().toString());
                 switch (checkedId){
                     case R.id.male:{
-                        Result= (Weight*100)*(Height*6.25)*(Age*5)/5 ;
+                        Result= (Weight*100)+(Height*6.25)-(Age*5)+5 ;
                         result.setText(String.valueOf(Result));
                     }
                     case R.id.female:{
-                        Result= (Weight*100)/(Height*6.25)/(Age*5)*161 ;
+                        Result= (Weight*100)+(Height*6.25)-(Age*5)-161 ;
                         result.setText(String.valueOf(Result));
                     }
                 }
