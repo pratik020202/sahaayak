@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class MainActivity4 extends AppCompatActivity {
     EditText weight,height,age;
     RadioGroup radioGroup;
-    Button button;
     TextView result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +19,7 @@ public class MainActivity4 extends AppCompatActivity {
         weight=findViewById(R.id.we);
         height=findViewById(R.id.he);
         age=findViewById(R.id.ag);
+        result=findViewById(R.id.finalanswer);
         radioGroup= findViewById(R.id.radioGroup2);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -30,11 +30,11 @@ public class MainActivity4 extends AppCompatActivity {
                 Height=Double.parseDouble(age.getText().toString());
                 switch (checkedId){
                     case R.id.male:{
-                        Result= (Weight*100)+(Height*6.25)-(Age*5)+5 ;
+                        Result= (Weight*100)*(Height*6.25)*(Age*5)/5 ;
                         result.setText(String.valueOf(Result));
                     }
                     case R.id.female:{
-                        Result= (Weight*100)+(Height*6.25)-(Age*5)-161 ;
+                        Result= (Weight*100)/(Height*6.25)/(Age*5)*161 ;
                         result.setText(String.valueOf(Result));
                     }
                 }
