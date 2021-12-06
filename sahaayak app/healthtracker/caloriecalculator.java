@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity4 extends AppCompatActivity {
     EditText weight,height,age;
     RadioGroup radioGroup;
+    Button button;
     TextView result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
