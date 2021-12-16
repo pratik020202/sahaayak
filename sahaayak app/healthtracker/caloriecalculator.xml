@@ -1,200 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+    android:orientation="vertical"
+android:layout_height="match_parent"
+tools:context=".CalorieCalculator">
+
+<TextView
+    android:id="@+id/w"
+    android:layout_width="189dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="112dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="111dp"
+    android:text="ENTER WEIGHT"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:id="@+id/we"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="104dp"
+    android:layout_marginEnd="98dp"
+    android:ems="10"
+    android:hint="KG"
+    android:inputType="number"
+    android:minHeight="48dp"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/w" />
+
+<TextView
+    android:id="@+id/h"
+    android:layout_width="189dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="111dp"
+    android:layout_marginTop="23dp"
+    android:layout_marginEnd="111dp"
+    android:text="enter height"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/we" />
+
+<EditText
+    android:id="@+id/he"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginEnd="101dp"
+    android:ems="10"
+    android:hint="cm"
+    android:inputType="number"
+    android:minHeight="48dp"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/h" />
+
+<TextView
+    android:id="@+id/textView15"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity4">
+    android:layout_height="36dp"
+    android:layout_marginTop="26dp"
+    android:text="calorie calculator"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    android:textSize="34sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/w"
-        android:layout_width="189dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="111dp"
-        android:text="ENTER WEIGHT"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:id="@+id/finalanswer"
+    android:layout_width="168dp"
+    android:layout_height="28dp"
+        android:layout_marginTop="30sp"
+    android:layout_marginStart="121dp"
+    android:layout_marginEnd="122dp"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <EditText
-        android:id="@+id/we"
+<TextView
+    android:id="@+id/a"
+    android:layout_width="190dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="110dp"
+    android:layout_marginTop="18dp"
+    android:layout_marginEnd="111dp"
+    android:text="enter age"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/he" />
+
+<EditText
+    android:id="@+id/ag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="100dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="101dp"
+    android:ems="10"
+    android:hint="Year"
+    android:inputType="number"
+    android:minHeight="48dp"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/a" />
+
+    <Button
+        android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginEnd="98dp"
-        android:ems="10"
-        android:hint="KG"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/w" />
+        android:layout_marginLeft="150sp"
+        android:layout_marginTop="20sp"
+        android:text="Calculate"
+        android:textColor="@color/teal_200"
+        android:fontFamily="@font/alike"/>
 
-    <TextView
-        android:id="@+id/h"
-        android:layout_width="189dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="111dp"
-        android:text="enter height"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/we" />
 
-    <EditText
-        android:id="@+id/he"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:hint="cm"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/h" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginTop="26dp"
-        android:text="calorie calculator"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="185dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="110dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ag">
-
-        <RadioButton
-            android:id="@+id/male"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="male"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
-
-        <RadioButton
-            android:id="@+id/female"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="female"
-            android:textAlignment="viewStart"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/finalanswer"
-        android:layout_width="168dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginEnd="122dp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/a"
-        android:layout_width="190dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="111dp"
-        android:text="enter age"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/he" />
-
-    <EditText
-        android:id="@+id/ag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:hint="Year"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/a" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="94dp"
-        android:text="YOU SHOULD BE EATING"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginEnd="118dp"
-        android:text="Calories per day"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalanswer" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
